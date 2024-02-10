@@ -4,7 +4,7 @@ import ProdutoVitrine from "../components/produto-vitrine/produto-vitrine.jsx";
 
 function Home(){
     return <>
-    <Navbar /> 
+    <Navbar showMenu={true}/> 
 
     <div className="container">
         <div className="titulo text-center">
@@ -15,11 +15,10 @@ function Home(){
 
 
     <div className="text-center">
-
-    <ProdutoVitrine />
-    <ProdutoVitrine />
-    <ProdutoVitrine />
-    <ProdutoVitrine />
+        <ProdutoVitrine />
+        <ProdutoVitrine />
+        <ProdutoVitrine />
+        <ProdutoVitrine />
     </div>
     </>
 }

@@ -2,10 +2,10 @@ import "./navbar.css";
 import Logo from "../../assets/logo.png";
 import bag from "../../assets/bag.png"
 import Cart from "../cart/cart";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
-function Navbar() {
+function Navbar(props) {
 
     function openSidebar(){
         const event = new CustomEvent("openSidebar")
@@ -14,15 +14,21 @@ function Navbar() {
     }
 
     return <div className="navbar">
-        <img src={Logo} className="logo"/>
+        <a href="/">
 
-            <div className="menu">
-                <a href="#">Histórico</a>
+        <img src={Logo} className="logo" />
+        </a>
+
+        {
+            props.showMenu &&
+                <div className="menu">
+                <Link to="/historico">Histórico</Link>
                 <button onClick={openSidebar} className="btn btn-red">
-                    <img src={bag} className="icon" />
+                    <img src={bag} className="icon"  />
                     Sacola
                 </button>
-            </div>
+                </div>            
+        }
           <Cart />
     </div>
 }

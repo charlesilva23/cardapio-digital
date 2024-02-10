@@ -1,9 +1,10 @@
 import "./produto-vitrine.css";
 import bag from "../../assets/bag-black.png";
+import foto from "../../assets/hamburguer.png"
 
 function ProdutoVitrine(){
     return <div className="produto text-center">
-      
+            <img src={foto} alt="Foto" />
     <div>
          
             <h2>Hamburguer</h2>
